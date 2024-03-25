@@ -1,0 +1,78 @@
+1. Инсталирав и креирав профил
+2. Го променив името на мојата главна гранка во master.
+3. Креирав репозиториум во Github што го именував SI_2024_lab1_223315.
+4. 
+Направив директориум и го иницијализирав Git во директориумот ->  mkdir SI_2024_lab1_223315, cd SI_2024_lab1_223315, git init.
+5. 
+$ git remote add origin https://github.com/emikos21/SI_2024_lab1_223315.git
+6. 
+touch README.md, nano README.md, git add README.md, git commit -m "Initial commit", git status.
+7.  
+cp "C:\Users\private\Downloads\SILab1_2.java" "C:\Users\private\Downloads\SILab1_1.java" "C:\Users\private\Downloads\SILab1Main.java" SI_2024_lab1_223315.
+8. 
+git push -u origin master - ги додадов фајловите во remote репото
+9. 
+$ git branch bug1 
+$ git branch bug2 ->креирање на две нови гранки
+10. 
+git checkout bug1
+11. 
+$ nano SILab1_1.java ->промена во фајлот
+$ git add SILab1_1.java ->додавање на сцена
+$ git commit -m "Fix wrong condition in filterOddLengthStrings" ->правење commit
+12.
+git checkout bug2
+13.
+$ nano SILab1_1.java ->промена во фајлот
+$ git add SILab1_1.java ->додавање на сцена
+$ git commit -m "Fix wrong condition in filterOddLengthStrings" ->правење commit
+14.
+git checkout bug1
+15.
+го даодадов методот на следниов начин:
+$ nano SILab1Main.java
+$ git add SILab1Main.java
+$ git commit -m "Call method filterOddLengthStrings in main class"
+16.
+$ git checkout bug2
+17.
+го даодадов методот на следниов начин:
+$ nano SILab1Main.java
+$ git add SILab1Main.java
+$ git commit -m "Call method makeBigStringFrom in main class"
+18.
+$  git push origin bug1
+$  git push origin bug2
+19.
+$ git checkout master
+20. 
+$ git merge bug1
+21.
+$ git push --all
+22.
+$ git checkout bug2
+23.
+Имаше конфликт
+$ git rebase master -> rebase спрема master
+$ nano SILab1Main.java -> го увидев тоа кога го отворив фајлот и имаше <<<<< и >>>>>
+и се одлучив за еден од двата избори
+$ git add SILab1Main.java -> го ставив на сцена фајлот
+$ git rebase --continue -> направив rebase и  го апдјетирав успешно багот
+24.
+$ git checkout master
+25.
+$ git merge bug2
+26.
+$ git push --force, бидејќи git push --all даваше конфликти.
+27.
+$ git push --force origin bug2
+28.
+$ touch logs.txt
+$ git log >> logs.txt
+$ touch 223315.txt
+$ nano 223315.txt
+$ git add 223315.txt
+$ git commit -m "Final commit"
+29. 
+$ git push --all
+
